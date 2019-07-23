@@ -1,0 +1,310 @@
+<!-- page title -->
+<section class="section section--first section--bg" data-bg="assets/img/section/section.jpg">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="section__wrap">
+					<!-- section title -->
+					<h2 class="section__title">My FlixGo</h2>
+					<!-- end section title -->
+
+					<!-- breadcrumb -->
+					<ul class="breadcrumb">
+						<li class="breadcrumb__item"><a href="#">Home</a></li>
+						<li class="breadcrumb__item breadcrumb__item--active">Profile</li>
+					</ul>
+					<!-- end breadcrumb -->
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- end page title -->
+
+<!-- content -->
+<div class="content">
+	<!-- profile -->
+	<div class="profile">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="profile__content">
+						<div class="profile__user">
+							<div class="profile__avatar">
+								<img src="assets/img/user.png" alt="">
+							</div>
+							<div class="profile__meta">
+								<h3>Username</h3>
+								<span>FlixGo ID: 23562</span>
+							</div>
+						</div>
+
+						<!-- content tabs nav -->
+						<ul class="nav nav-tabs content__tabs content__tabs--profile" id="content__tabs" role="tablist">
+							<li class="nav-item">
+								<a class="nav-link active" data-toggle="tab" href="#tab-1" role="tab"
+									aria-controls="tab-1" aria-selected="true">Profile</a>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2"
+									aria-selected="false">Subscription</a>
+							</li>
+						</ul>
+						<!-- end content tabs nav -->
+
+						<!-- content mobile tabs nav -->
+						<div class="content__mobile-tabs content__mobile-tabs--profile" id="content__mobile-tabs">
+							<div class="content__mobile-tabs-btn dropdown-toggle" role="navigation" id="mobile-tabs"
+								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<input type="button" value="Profile">
+								<span></span>
+							</div>
+
+							<div class="content__mobile-tabs-menu dropdown-menu" aria-labelledby="mobile-tabs">
+								<ul class="nav nav-tabs" role="tablist">
+									<li class="nav-item"><a class="nav-link active" id="1-tab" data-toggle="tab"
+											href="#tab-1" role="tab" aria-controls="tab-1"
+											aria-selected="true">Profile</a></li>
+
+									<li class="nav-item"><a class="nav-link" id="2-tab" data-toggle="tab" href="#tab-2"
+											role="tab" aria-controls="tab-2" aria-selected="false">Subscription</a></li>
+								</ul>
+							</div>
+						</div>
+						<!-- end content mobile tabs nav -->
+
+						<button class="profile__logout" type="button">
+							<i class="icon ion-ios-log-out"></i>
+							<span>Logout</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end profile -->
+
+	<div class="container">
+		<!-- content tabs -->
+		<div class="tab-content" id="myTabContent">
+			<div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="1-tab">
+				<div class="row">
+					<!-- details form -->
+					<div class="col-12 col-lg-6">
+						<form action="#" class="profile__form" [formGroup]="profileForm">
+							<div class="row">
+								<div class="col-12">
+									<h4 class="profile__title">Profile details</h4>
+								</div>
+
+								<div class="col-12 col-md-6 col-lg-12 col-xl-6">
+									<div class="profile__group">
+										<label class="profile__label" for="username">Username</label>
+										<input formControlName="username"  type="text" name="username"
+											class="profile__input" placeholder="User 123">
+									</div>
+								</div>
+
+								<div class="col-12 col-md-6 col-lg-12 col-xl-6">
+									<div class="profile__group">
+										<label class="profile__label" for="email">Email</label>
+										<input formControlName="email" type="text" name="email" class="profile__input"
+											placeholder="email@email.com">
+									</div>
+								</div>
+
+								<div class="col-12 col-md-6 col-lg-12 col-xl-6">
+									<div class="profile__group">
+										<label class="profile__label" for="firstname">First Name</label>
+										<input formControlName="nom" type="text" name="nom" class="profile__input"
+											placeholder="John">
+									</div>
+								</div>
+
+								<div class="col-12 col-md-6 col-lg-12 col-xl-6">
+									<div class="profile__group">
+										<label class="profile__label" for="lastname">Last Name</label>
+										<input formControlName="prenom" type="text" name="prenom" class="profile__input"
+											placeholder="Doe">
+									</div>
+								</div>
+								<div class="col-12 col-md-6 col-lg-12 col-xl-6">
+									<div class="profile__group">
+										<label class="profile__label" for="adress">Adress</label>
+										<input formControlName="adresse" type="text" name="adresse"
+											class="profile__input" placeholder="adress">
+									</div>
+								</div>
+
+								<div class="col-12">
+									<button (click)="save(profileForm)" class="profile__btn" type="button">Save</button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<!-- end details form -->
+
+					<!-- password form -->
+					<div class="col-12 col-lg-6">
+						<form action="#" class="profile__form" [formGroup]="passwordForm">
+							<div class="row">
+								<div class="col-12">
+									<h4 class="profile__title">Change password</h4>
+								</div>
+
+								<div class="col-12 col-md-6 col-lg-12 col-xl-6">
+									<div class="profile__group">
+										<label class="profile__label" for="oldpass">Old Password</label>
+										<input formControlName="oldPass" type="password" name="oldpass"
+											class="profile__input">
+									</div>
+								</div>
+
+								<div class="col-12 col-md-6 col-lg-12 col-xl-6">
+									<div class="profile__group">
+										<label class="profile__label" for="newpass">New Password</label>
+										<input formControlName="password"   type="password" name="password"
+											class="profile__input">
+									</div>
+								</div>
+
+								<div class="col-12 col-md-6 col-lg-12 col-xl-6">
+									<div class="profile__group">
+										<label class="profile__label" for="confirmpass">Confirm New Password</label>
+										<input formControlName="confirmPass"  type="password" name="confirmpass"
+											class="profile__input">
+									</div>
+								</div>
+
+								<div class="col-12">
+									<button (click)="change()"  class="profile__btn" type="button">Change</button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<!-- end password form -->
+				</div>
+			</div>
+
+			<div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="2-tab">
+				<div class="row">
+					<!-- price -->
+					<div class="col-12 col-md-6 col-lg-4">
+						<div class="price price--profile">
+							<div class="price__item price__item--first"><span>Basic</span> <span>Free</span></div>
+							<div class="price__item"><span>7 days</span></div>
+							<div class="price__item"><span>720p Resolution</span></div>
+							<div class="price__item"><span>Limited Availability</span></div>
+							<div class="price__item"><span>Desktop Only</span></div>
+							<div class="price__item"><span>Limited Support</span></div>
+							<a href="#" class="price__btn">Choose Plan</a>
+						</div>
+					</div>
+					<!-- end price -->
+
+					<!-- price -->
+					<div class="col-12 col-md-6 col-lg-4">
+						<div class="price price--profile price--premium">
+							<div class="price__item price__item--first"><span>Premium</span> <span>$19.99</span></div>
+							<div class="price__item"><span>1 Month</span></div>
+							<div class="price__item"><span>Full HD</span></div>
+							<div class="price__item"><span>Lifetime Availability</span></div>
+							<div class="price__item"><span>TV & Desktop</span></div>
+							<div class="price__item"><span>24/7 Support</span></div>
+							<a href="#" class="price__btn">Choose Plan</a>
+						</div>
+					</div>
+					<!-- end price -->
+
+					<!-- price -->
+					<div class="col-12 col-md-6 col-lg-4">
+						<div class="price price--profile">
+							<div class="price__item price__item--first"><span>Cinematic</span> <span>$39.99</span></div>
+							<div class="price__item"><span>2 Months</span></div>
+							<div class="price__item"><span>Ultra HD</span></div>
+							<div class="price__item"><span>Lifetime Availability</span></div>
+							<div class="price__item"><span>Any Device</span></div>
+							<div class="price__item"><span>24/7 Support</span></div>
+							<a href="#" class="price__btn">Choose Plan</a>
+						</div>
+					</div>
+					<!-- end price -->
+				</div>
+			</div>
+		</div>
+		<!-- end content tabs -->
+	</div>
+</div>
+<!-- end content -->
+
+<!-- footer -->
+<footer class="footer">
+	<div class="container">
+		<div class="row">
+			<!-- footer list -->
+			<div class="col-12 col-md-3">
+				<h6 class="footer__title">Download Our App</h6>
+				<ul class="footer__app">
+					<li><a href="#"><img src="assets/img/Download_on_the_App_Store_Badge.svg" alt=""></a></li>
+					<li><a href="#"><img src="assets/img/google-play-badge.png" alt=""></a></li>
+				</ul>
+			</div>
+			<!-- end footer list -->
+
+			<!-- footer list -->
+			<div class="col-6 col-sm-4 col-md-3">
+				<h6 class="footer__title">Resources</h6>
+				<ul class="footer__list">
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">Pricing Plan</a></li>
+					<li><a href="#">Help</a></li>
+				</ul>
+			</div>
+			<!-- end footer list -->
+
+			<!-- footer list -->
+			<div class="col-6 col-sm-4 col-md-3">
+				<h6 class="footer__title">Legal</h6>
+				<ul class="footer__list">
+					<li><a href="#">Terms of Use</a></li>
+					<li><a href="#">Privacy Policy</a></li>
+					<li><a href="#">Security</a></li>
+				</ul>
+			</div>
+			<!-- end footer list -->
+
+			<!-- footer list -->
+			<div class="col-12 col-sm-4 col-md-3">
+				<h6 class="footer__title">Contact</h6>
+				<ul class="footer__list">
+					<li><a href="tel:+18002345678">+1 (800) 234-5678</a></li>
+					<li><a href="mailto:support@moviego.com">support@flixgo.com</a></li>
+				</ul>
+				<ul class="footer__social">
+					<li class="facebook"><a href="#"><i class="icon ion-logo-facebook"></i></a></li>
+					<li class="instagram"><a href="#"><i class="icon ion-logo-instagram"></i></a></li>
+					<li class="twitter"><a href="#"><i class="icon ion-logo-twitter"></i></a></li>
+					<li class="vk"><a href="#"><i class="icon ion-logo-vk"></i></a></li>
+				</ul>
+			</div>
+			<!-- end footer list -->
+
+			<!-- footer copyright -->
+			<div class="col-12">
+				<div class="footer__copyright">
+					<small>© 2018 FlixGo. Create by <a
+							href="https://themeforest.net/user/dmitryvolkov/portfolio?ref=DmitryVolkov"
+							target="_blank">Dmitry Volkov</a></small>
+
+					<ul>
+						<li><a href="#">Terms of Use</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- end footer copyright -->
+		</div>
+	</div>
+</footer>
+<!-- end footer -->
